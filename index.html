@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>What's the best API?</title>
+    <link rel='stylesheet' href='styles.css'/>
+  </head>
+  <body>
+    
+    <div class="to-do">
+        <h1>My To-do list: </h1>
+        <ol>
+            <li>Find the best API</li>
+        </ol>
+    </div>
+    
+    <div class="text">
+        
+        <p id="t1">Ok. </p>
+        <p id="t2">This is the list they gave us, </p>
+        <p id="t4">lets see what we have here. </p>
+        
+        <p id="t5">hmmm</p>
+        <p id="t6">laaa</p>
+        
+        <p id="t7">oooo, a DOG api!</p>
+        <p id="t8">I love dogs!</p>
+        <p id="t9">let's try this one!</p>
+        
+        <input id="makeDog" type="submit" value="click to see doggos"></input>
+        <div id="dog" class="pics"></div>
+        
+        <input id="doneDog" type="submit" value="continue"></input>
+        
+        <p id="t10">I love dogs. They're so cute. </p>
+        <p id="t11">Ok, DOG api is a solid contender,</p>
+        <p id="t12">but just in case, </p>
+        <p id="t13">lets keep looking</p>
+        
+        <p id="t14">hmmm</p>
+        <p id="t15">laaa</p>
+        
+        <p id="t16">no they didn't</p>
+        <p id="t17">there is NO WAY this is an actual option</p>
+        
+        <input id="makeCatboy" type="submit" value="click if you dare"></input>
+        <div id="catboy" class="pics"></div>
+    </div>
+    
+    <div class="text">
+        
+        <p id="t18">oh</p>
+        
+        <p id="t19">it's</p>
+        
+        <p id="t20">it's</p>
+        
+        <p id="t21">PURRFECT!</p>
+        
+        <p id="t22">CATBOY API WINS!</p>
+        
+    </div>
+    
+    <div class="to-do" id="list2">
+        <h1>My To-do list: </h1>
+        <ol>
+            <li><strike>Find the best API</strike></li>
+        </ol>
+    </div>
+    
+    <footer id="gitlink"><a href="https://github.com/MXMiller/creative-2">the github repo</a></footer>
+    
+    <script>
+        function showText(id,delay){
+            var elem=document.getElementById(id);
+            setTimeout(function(){elem.style.visibility='visible';},delay*1000)
+        }
+        
+        function addChar(id,delay,char){
+            var elem=document.getElementById(id);
+            setTimeout(function(){elem.append(char);},delay*1000)
+        }
+        
+        function showButton(id,delay){
+            var elem=document.getElementById(id);
+            setTimeout(function(){elem.style.visibility='visible';},delay*1000)
+        }
+        
+        window.onload=function(){
+            
+            let delay = 1;
+            
+            showText('t1',delay);
+            
+            showText('t2',delay += 1);
+            
+            showText('t4',delay += 1);
+            
+            showText('t5',delay += 1);
+            addChar('t5',delay += 0.4,' hm');
+            addChar('t5',delay += 0.2,' hmm');
+            
+            showText('t6',delay += 0.4);
+            addChar('t6',delay += 0.4,' la');
+            addChar('t6',delay += 0.2,' laa');
+            
+            showText('t7',delay += 1);
+            showText('t8',delay += 0.5);
+            showText('t9',delay += 0.5);
+            
+            showButton('makeDog',delay += 1);
+            showButton('dog',delay);
+        }
+        
+        document.getElementById("makeDog").addEventListener("click", function(event) {
+            let delay = 0;
+            
+            showButton('doneDog',delay += 10);
+        });
+        
+        document.getElementById("doneDog").addEventListener("click", function(event) {
+            let delay = 1;
+            
+            showText('t10',delay);
+            showText('t11',delay += 1);
+            showText('t12',delay += 1);
+            showText('t13',delay += 1);
+            
+            showText('t14',delay += 1);
+            addChar('t14',delay += 0.4,' hm');
+            addChar('t14',delay += 0.2,' hmm');
+            
+            showText('t15',delay += 0.4);
+            addChar('t15',delay += 0.4,' la');
+            
+            addChar('t15',delay += 1,' .');
+            addChar('t15',delay += 0.5,' .');
+            addChar('t15',delay += 0.5,' .');
+            
+            showText('t16',delay += 2);
+            showText('t17',delay += 2);
+            
+            showButton('makeCatboy',delay += 2);
+            showButton('catboy',delay);
+        });
+        
+        document.getElementById("makeCatboy").addEventListener("click", function(event) {
+            let delay = 2;
+            
+            showText('t18',delay += 1);
+            addChar('t18',delay += 0.5,' my');
+            addChar('t18',delay += 0.5,' gosh');
+            
+            showText('t19',delay += 2);
+            addChar('t19',delay += 0.5,' .');
+            addChar('t19',delay += 0.5,' .');
+            addChar('t19',delay += 0.5,' .');
+            
+            showText('t20',delay += 1);
+            addChar('t20',delay += 0.5,' .');
+            addChar('t20',delay += 0.5,' .');
+            addChar('t20',delay += 0.5,' .');
+            
+            
+            showText('t21',delay += 2);
+            showText('t22',delay += 1);
+            showText('list2',delay += 1);
+        });
+
+    </script>
+    
+    <script text="type/javascript" src="script.js"></script>
+  
+  </body>
+</html>

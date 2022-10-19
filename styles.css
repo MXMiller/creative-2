@@ -1,0 +1,49 @@
+body {
+    margin: 0;
+    padding: 50px;
+    
+    font-family: Arial, sans-serif	;
+}
+
+ol, li {
+    font-size: 24pt;
+}
+
+p, input, footer {
+    font-size: 24pt;
+}
+
+#19 {
+    font-size: 30pt;
+}
+
+#20 {
+    font-size: 36pt;
+}
+
+#t21, #t22 {
+    font-size: 72pt;
+    font-weight: bold;
+}
+
+#gitlink, #head{
+    text-align: center;
+}
+
+.text {
+    visibility: hidden;
+    text-align: center;
+}
+
+#list2 {
+    visibility: hidden;
+}
+
+.pics {
+    max-width: 500;
+    padding: 50px;
+}
+
+.to-do {
+    font-family: Bradley Hand, cursive;
+}
